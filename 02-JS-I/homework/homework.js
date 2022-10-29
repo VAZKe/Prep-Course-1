@@ -116,9 +116,9 @@ function esImpar(num) {
   // Devuelve "true" si "num" es impar
   // De lo contrario, devuelve "false"
   // Tu código:
-  if (num % 2 === 0) {
-    return true}
-    else {return false
+  if (num % 2 == 0) {
+    return false}
+    else {return true
   } 
 }
 
@@ -126,19 +126,19 @@ function elevarAlCuadrado(num) {
   // Devuelve el valor de "num" elevado al cuadrado
   // ojo: No es raiz cuadrada!
   // Tu código:
-  return num ^ 2;
+  return Math.pow (num, 2);
 }
 
 function elevarAlCubo(num) {
   // Devuelve el valor de "num" elevado al cubo
   // Tu código:
-  return num ^ 3;
+  return Math.pow (num, 3);
 }
 
 function elevar(num, exponent) {
   // Devuelve el valor de "num" elevado al exponente dado en "exponent"
   // Tu código:
-  return num ^ exponent;
+  return Math.pow (num, exponent);
 }
 
 function redondearNumero(num) {
@@ -150,7 +150,7 @@ function redondearNumero(num) {
 function redondearHaciaArriba(num) {
   // Redondea "num" hacia arriba (al próximo entero) y devuélvelo
   // Tu código:
-  return Math.toFixed (num);
+  return Math.ceil (num);
 }
 
 function numeroRandom() {
@@ -190,7 +190,7 @@ function obtenerSaludo(nombre) {
   // Toma la string "nombre" y concatena otras string en la cadena para que tome la siguiente forma:
   // "Martin" -> "Hola Martin!"
   // Tu código:
-  return "adios " + nombre;
+  return "Hola " + nombre + "!";
 }
 
 function obtenerAreaRectangulo(alto, ancho) {
@@ -228,7 +228,12 @@ function esVocal(letra){
   //que no se puede procesar el dato mediante el mensaje "Dato incorrecto".
   // Si no es vocal, tambien debe devolver "Dato incorrecto".
   //Escribe tu código aquí
-  
+  if (letra == "a" || letra == "e" || letra == "i" || letra == "o" || letra == "u") {
+    return "Es vocal"}
+    else if (letra.length > 1) {
+      return "Dato incorrecto"}
+      else {return "Dato incorrecto"
+  }
 }
 
 
