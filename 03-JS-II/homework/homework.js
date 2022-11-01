@@ -8,7 +8,7 @@ function obtenerMayor(x, y) {
   if (x > y) {
     return x}
     else if (x == y) {
-      return x||y }
+      return x }
       else {return y
   }
 }
@@ -150,8 +150,17 @@ function esPrimo(numero) {
   // Pista: un número primo solo es divisible por sí mismo y por 1
   // Pista 2: Puedes resolverlo usando un bucle `for`
   // Nota: Los números 0 y 1 NO son considerados números primos
-
-}
+  var c = 0;
+  if (numero > 1){
+    for (let i = 2; i <= numero; i++) {
+      if (numero%i == 0) {
+        c++;
+        } else {}
+      } 
+    } else {return false}
+  if (c >= 2) {return false}
+    else {return true}
+  }
 
 function esVerdadero(valor){
   //Escribe una función que reciba un valor booleano y retorne “Soy verdadero” 
@@ -167,37 +176,32 @@ function esVerdadero(valor){
 function tablaDelSeis(){
   //Escribe una función que muestre la tabla de multiplicar del 6 (del 0 al 60).
   //La función devuelve un array con los resultados de la tabla de multiplicar del 6 en orden creciente.
-  //Escribe tu código aquí   
-  do {
-    var i = 0;
-    var numero = i*6;
-    i = i++;
-  } while (i < 10);
-  return numero;
+  //Escribe tu código aquí 
+  arrayResultados = []
+  for (var i=0; i <= 10; i++) {
+    arrayResultados.push (i*6);
+  } return arrayResultados;
 }
 
 function tieneTresDigitos(numero){
   //Leer un número entero y retornar true si tiene 3 dígitos. Caso contrario, retorna false.
   //Escribe tu código aquí
-  var i = numero.toString().length()
-  if (i == 3) {
-    return true}
-    else {return false
-  }
+  if (numero>99 && numero<1000) {
+    return true
+  } else {return false}
 }
 
 function doWhile(numero) {
   //Implementar una función tal que vaya aumentando el valor recibido en 5 hasta un límite de 8 veces
   //Retornar el valor final.
   //Usar el bucle do ... while.
+  var i = 0;
+  var a = numero;
   do {
-    i = 0;
-    numero = numero + 5;
-    i = i++;
+    i++;
+    a = a + 5;
   } while (i < 8);
-  if (i == 8) {
-    return numero
-  }
+  return a;
 }
 
 
@@ -219,5 +223,5 @@ module.exports = {
   esVerdadero,
   tablaDelSeis,
   tieneTresDigitos,
-  doWhile
+  doWhile,
 };
